@@ -1,0 +1,28 @@
+1. 系统准备
+操作系统：确保你使用的是支持的操作系统，通常为Linux（如CentOS或Ubuntu）或Windows。
+数据库：蓝凌EKP通常使用MySQL或SQL Server作为数据库，确保数据库已安装并配置好。
+JDK：安装合适版本的Java Development Kit（JDK），通常需要JDK 8及以上版本。
+Web服务器：如Tomcat（推荐使用Tomcat 7或以上版本）。
+2. 安装前的准备工作
+下载蓝凌EKP安装包：从蓝凌官网或者你的供应商获取最新的安装包。
+创建数据库和表：在MySQL或SQL Server中创建数据库实例，用于存储EKP数据。
+配置环境变量：确保JAVA_HOME、CATALINA_HOME等环境变量配置正确。
+3. 安装步骤
+3.1 数据库配置
+打开MySQL或SQL Server，创建一个新的数据库，比如blueking_db。
+导入蓝凌EKP提供的SQL文件，创建所需的表和存储过程。
+3.2 部署Web应用
+解压蓝凌EKP安装包，找到安装包中包含的WAR文件。
+将WAR文件拷贝到Tomcat的webapps目录下。
+启动Tomcat服务器，访问 http://localhost:8080 查看是否能够访问到EKP系统。
+3.3 配置EKP环境
+修改EKP系统的配置文件，如config.properties，指定数据库连接信息、服务器地址等。
+根据需要调整Tomcat的JVM参数，增加内存分配等。
+3.4 启动并测试
+启动Tomcat服务。
+在浏览器中输入地址https://oa.118114cq.com:4433/login.jsp进行测试，默认密码admin,1
+如果一切顺利，该重庆电信EKP系统应该能够正常加载登录页面。
+4. 后续配置
+权限和角色管理：根据实际需求配置系统的用户权限和角色。
+定时任务配置：配置定时任务，如数据备份、报表生成等。
+备份和恢复：设置数据库备份及恢复策略，确保数据安全。

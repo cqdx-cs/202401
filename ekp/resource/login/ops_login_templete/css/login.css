@@ -1,0 +1,1934 @@
+@charset "UTF-8";
+
+/**
+** 代码制作人: Gao
+** 制作时间：2021-07-20
+** 文件内容描述：Demo专用登录页(体验官登录版)
+** 修改日期：无
+** 修改内容：无
+**********************************************/
+
+/* 动画 */
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeB {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes fadeB {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeC {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes fadeC {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 动画 */
+
+
+/* 主色 009db1 浅色 41bfc6 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+[hidden],
+template {
+    display: none;
+}
+
+a {
+    background-color: transparent;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+a:hover {
+    color: #E5433D;
+}
+
+img {
+    border: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+button {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+html input[type="button"],
+/* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+input {
+    line-height: normal;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    height: auto;
+}
+
+input[type='search'] {
+    -webkit-appearance: textfield;
+    box-sizing: content-box;
+}
+
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    font-family: "PingFang SC", "Lantinghei SC", "Helvetica Neue", Arial, "Microsoft YaHei", "WenQuanYi Micro Hei", "Heiti SC", "Segoe UI", sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+    overflow: hidden;
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+}
+
+input::-ms-clear,
+input::-ms-reveal {
+    display: none;
+}
+
+input::-webkit-search-cancel-button {
+    display: none;
+}
+
+input[type='search']::-ms-clear {
+    display: none;
+}
+
+::-ms-clear,
+::-ms-reveal {
+    display: none;
+}
+
+.clr {
+    clear: both;
+    line-height: 0px;
+}
+
+.clrfix {
+    zoom: 1;
+}
+
+.clrfix:after {
+    content: '';
+    display: table;
+    line-height: 0px;
+    visibility: hidden;
+}
+
+/* 样式重置 Ends  */
+
+
+/* CSS图片预加载 Starts */
+.lay_background_img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+/* 分享链接LOGO */
+.share_logo {
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* ---------- 头部 Starts ---------- */
+.login_header {
+    height: 35px;
+}
+
+.login_header .main_content {
+    position: relative;
+}
+
+.login_header .logo {
+    display: inline-block;
+}
+
+.login_header .main_content {}
+
+.login_header .main_content:after {
+    display: table;
+    content: '';
+    clear: both;
+}
+
+.login_header ul {
+    list-style: none;
+}
+
+.login_top_bar {
+    /* display: none; */
+    height: 32px;
+    /* position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2; */
+}
+
+.ltie8 .login_top_bar {
+    background: transparent url(../images/login_bar_bg.png) repeat left top;
+}
+
+.login_header ul {
+    float: right;
+}
+
+.login_header ul li {
+    float: left;
+    padding: 7px 0;
+}
+
+.login_header ul li a {
+    font-size: 12px;
+    color: #999;
+    border-left: 0;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 23px;
+    display: inline-block;
+}
+
+ul.header_lan {
+    position: fixed;
+    right: 0;
+    top: 16px;
+}
+
+.login_header ul li:first-child a {
+    border-left: none;
+}
+
+.login_header ul li a:hover {
+    text-decoration: underline;
+    color: #E5433D;
+}
+
+.login_iframe {
+    padding: 0;
+    position: absolute;
+}
+
+.login_iframe .header {
+    clear: both;
+    text-align: left;
+    font-size: 0;
+    position: relative;
+    margin: 0 0 15px 0;
+}
+
+.login_iframe .header .header_tab {
+    max-width: 33%;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+}
+
+.login_iframe .header .header_tab:hover {
+    color: #E5433D;
+    cursor: pointer;
+}
+
+.login_iframe .header .header_tab.selected {
+    color: #E5433D;
+}
+
+.login_iframe .header .header_tab>span {
+    display: inline-block;
+    line-height: 34px;
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+    margin: 0 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.login_iframe .header .header_tab.selected>span {
+    border-color: #E5433D;
+}
+
+.login_iframe .header .header_tab:first-child>span {
+    margin-left: 0;
+}
+
+.login_iframe .header em {
+    font-size: 18px;
+    color: #b2b2b2;
+    margin-left: 15px;
+}
+
+.login_iframe .login_item {
+    padding: 0px 25px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.login_iframe .login_item input {
+    color: #222;
+    font-size: 16px;
+    outline: none;
+    background-color: #fff;
+    padding: 10px 4%;
+    width: 92%;
+    line-height: 20px;
+    border: 1px solid #d6d6d6;
+    border-radius: 0;
+}
+
+.login_iframe .login_item input:focus {
+    /* border-color: #E5433D; */
+    outline: none
+        /* -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); */
+        /* box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); */
+}
+
+.login_iframe .login_btn {
+    cursor: pointer;
+    display: inline-block;
+    color: #fff;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    text-align: center;
+    /* border: 1px solid #E5433D; */
+    background-color: #E5433D;
+    background: linear-gradient(270deg, #E5433D 0%, #BD3234 100%);
+    border-radius: 0;
+    font-size: 18px;
+    word-spacing: 4px;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.35);
+    transition: all 0.3s ease-in-out;
+}
+
+/* 验证码 */
+.input_verity {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+.verity_pic {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.login_iframe .login_btn:hover {
+    border-color: #E5433D;
+    background-color: #E5433D;
+}
+
+.login_iframe .bottom {
+    text-align: center;
+    color: #999;
+    padding: 0 25px 15px;
+}
+
+.login_iframe .bottom a {
+    text-decoration: none;
+    color: #999;
+    cursor: pointer;
+}
+
+.login_iframe .bottom a:hover {
+    text-decoration: underline;
+}
+
+.login_iframe .bottom em {
+    margin: 0px 8px;
+}
+
+.lui_login_form_opt {}
+
+.lui_login_form_opt a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.lui_login_form_opt .kkDownloadLink {
+    color: #fff;
+    font-size: 14px;
+}
+
+.lui_login_form_opt .forgetPswLink {
+    float: right;
+    color: #fff;
+}
+
+/*kk下载*/
+.login_iframe .form_bottom {
+    text-align: center;
+    color: #999;
+    /* padding: 0 42px; */
+}
+
+.login_iframe .form_bottom a {
+    text-decoration: none;
+    /*     color: #999; */
+    cursor: pointer;
+    display: block;
+}
+
+.login_iframe .form_bottom a:hover {}
+
+.login_iframe .form_bottom a:hover .third_login_item_icon {
+    color: #fff;
+}
+
+.login_iframe .form_bottom em {
+    margin: 0px 8px;
+}
+
+.login_iframe .form_bottom .kk_logo {
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    background: url(../images/kk_logo.png) no-repeat left top;
+}
+
+.main_content {
+    /* width: 1200px; */
+    /*position: relative;
+	padding: 0 30px;
+	min-height: 1px;
+	margin: 0px auto;*/
+}
+
+.login_iframe_box {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.login_footer {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    font-size: 14px;
+    color: #748BA3;
+    line-height: 24px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.login_footer p {
+    margin: 0;
+}
+
+/*背景图片*/
+.login-background-img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    -webkit-animation: fadeIn 0.8s ease-in-out 0s 1;
+    -moz-animation: fadeIn 0.8s ease-in-out 0s 1;
+    -o-animation: fadeIn 0.8s ease-in-out 0s 1;
+    -ms-animation: fadeIn 0.8s ease-in-out 0s 1;
+    animation: fadeIn 0.8s ease-in-out 0s 1;
+    animation-fill-mode: both;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login-background-img>img {
+    /* width: 100%; */
+    height: 100%;
+    /* min-height: 100%; */
+}
+
+#login-bgImg {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+}
+
+/*下拉弹出窗*/
+.login-dropbox {
+    position: absolute;
+    right: -1px;
+    top: -1px;
+}
+
+.login-dropbox-toggle {
+    width: 45px;
+    height: 38px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 100% 50%;
+    overflow: hidden;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1001;
+}
+
+.login-dropbox-toggle .iconbox {
+    width: 90px;
+    height: 38px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.login-dropbox-toggle .iconbox .icon-PC,
+.login-dropbox-toggle .iconbox .icon-QRcode {
+    width: 45px;
+    height: 38px;
+    border-top-right-radius: 8px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    display: block;
+    float: left;
+}
+
+.login-dropbox-toggle .iconbox .icon-PC {
+    background-image: url(../images/login_icon_PC.png);
+}
+
+.login-dropbox-toggle .iconbox .icon-QRcode {
+    background-image: url(../images/login_icon_QR.png);
+}
+
+.login-dropbox-menu {
+    display: none;
+    padding: 0px 10px;
+    width: 510px;
+    min-height: 225px;
+    border-radius: 0;
+    border: 1px solid #d6d6d6;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.login_iframe .login-dropbox-menu .header {
+    padding-top: 10px;
+    padding: 2px 15px;
+    text-align: left;
+    background: none;
+}
+
+.login-dropbox-QRcode-list {
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+}
+
+.login-dropbox-QRcode-list:before,
+.login-dropbox-QRcode-list:after {
+    display: table;
+    content: ' ';
+}
+
+.login-dropbox-QRcode-list:after {
+    clear: both;
+}
+
+.login-dropbox-QRcode-list>li {
+    width: 33.33%;
+    min-height: 1px;
+    float: left;
+}
+
+.login-QRcode-box {
+    margin: 0 8px;
+    text-align: center;
+}
+
+.login-QRcode-box .title {
+    margin: 5px 0 12px;
+    font-size: 16px;
+    font-weight: normal;
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.login-QRcode-box .QRcode {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
+
+.login-QRcode-box .QRcode>img {
+    width: 100%;
+}
+
+.login-QRcode-box .depict {
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.login_content {}
+
+.login-warningbar {
+    margin-top: -5px;
+    margin-bottom: 12px;
+    padding: 0 10px;
+    height: 20px;
+    text-align: center;
+    color: #ff7753;
+}
+
+.lui_login_form_table {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.lui_login_message_td {
+    text-align: left;
+    width: 100%;
+    color: #E5433D;
+}
+
+.lui_login_input_title {
+    display: none;
+}
+
+.lui_login_input_div input:focus {
+    /*     text-fill-color: #fff; */
+    /* -webkit-text-fill-color: #fff; */
+    /* color: #fff; */
+    /* border-color: #672d2f; */
+    /* outline: 0; */
+}
+
+.lui_login_input_div input:-webkit-autofill {
+    background-color: transparent;
+    -webkit-box-shadow: 0 0 0px 1000px #F2F4F7 inset;
+    box-shadow: 0 0 0px 1000px #F2F4F7 inset;
+}
+
+.lui_login_input_div input:focus:-webkit-autofill {
+    /* -webkit-text-fill-color: #333; */
+    border: none;
+    background-color: transparent;
+}
+
+/*去掉苹果电脑钥匙starts*/
+.lui_login_input_td .lui_login_input_div input::-webkit-credentials-auto-fill-button {
+    display: none !important;
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+}
+
+/*去掉苹果电脑钥匙ends*/
+.lui_login_input_td .lui_login_input_div input::-webkit-input-placeholder,
+.lui_login_input_td .lui_login_input_div input:-moz-placeholder,
+.lui_login_input_td .lui_login_input_div input:-ms-input-placeholder {
+    color: #8F959E !important;
+    text-fill-color: #8F959E !important;
+    /* -webkit-text-fill-color: #8F959E !important; */
+    font-size: 14px !important;
+    font-family: "PingFang SC", "Lantinghei SC", "Helvetica Neue", Arial, "Microsoft YaHei", "WenQuanYi Micro Hei", "Heiti SC", "Segoe UI", sans-serif;
+}
+
+.lui_login_input_div input:focus::-webkit-input-placeholder {
+    color: #8F959E;
+    text-fill-color: #8F959E;
+    /* -webkit-text-fill-color: #8F959E; */
+}
+
+/* 单选 */
+.lui_login_input_div input[type='radio'] {
+    margin: 0px 5px;
+    margin-left: 15px;
+}
+
+.lui_login_input_div input[type='radio']:first-child {
+    margin-left: 0px;
+}
+
+/* 下拉框 */
+.dropdown {
+    text-align: left;
+    color: #333;
+    font-size: 12px;
+    outline: none;
+    background-color: #fff;
+    padding: 0px 0px;
+    padding-right: 10px;
+    height: 26px;
+    line-height: 26px;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-bottom: none;
+    position: absolute;
+    right: 36px;
+    bottom: 0px;
+    z-index: 102;
+}
+
+.dropdown.current {
+    border-color: #d6d6d6;
+}
+
+.dropdown .dropdown-icon {
+    text-align: center;
+}
+
+.dropdown .dropdown-icon i {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border: 3px solid transparent;
+    border-top-color: #333;
+}
+
+.dropdown .dropdown-input {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.dropdown-options {
+    z-index: 101;
+}
+
+.dropdown-options li {
+    list-style: none;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.dropdown-options li a {
+    color: #333;
+    cursor: default;
+    font-size: 12px;
+    padding: 0px 10px;
+    display: block;
+    width: 65px;
+    height: 26px;
+    line-height: 26px;
+    white-space: nowrap;
+}
+
+.dropdown-options li a:hover {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    background: #f7f7f7;
+}
+
+.dropdown-options {
+    padding: 0px;
+    list-style: none;
+    background: #fff;
+    border: 1px solid #d6d6d6;
+}
+
+/* 验证码 */
+.lui_login_input_div input.lui_login_input_vcode {
+    vertical-align: top;
+    /* width: 190px; */
+    margin-right: 0;
+    /* padding-right: 100px; */
+    display: inline-block;
+}
+
+.lui_login_input_div.lui_login_input_div_vcode {
+    margin-right: 104px;
+    padding-left: 12px;
+}
+
+.lui_login_input_div_vcode_img {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    border: 0;
+    width: 99px;
+    height: 36px;
+}
+
+.login_radio_wrap {
+    display: none;
+}
+
+.lui_login_message_td {
+    padding: 0;
+    /* padding-left: 37px; */
+    height: auto;
+}
+
+.lui_login_message_div {
+    background: url(../images/icon_tips.png) no-repeat left 6px;
+    padding-left: 19px;
+    padding-right: 10px;
+}
+
+.lui_login_message_div {
+    padding-right: 20px;
+}
+
+.tip_message {
+    color: #F25643;
+    line-height: 18px;
+    padding-top: 5px;
+    padding-bottom: 12px;
+}
+
+.lui_login_message_div.tip_message {
+    border: 0;
+    background-color: transparent;
+    word-break: break-all;
+}
+
+.lui_login_input_div .icon_del {
+    display: none;
+    width: 18px;
+    height: 18px;
+    background: url(../images/icon_del.png) no-repeat left top;
+    position: absolute;
+    right: 5px;
+    left: auto;
+    top: 11px;
+    cursor: pointer;
+}
+
+.lui_login_input_div .icon_del:hover {}
+
+.lui_login_input_div {
+    position: relative;
+    padding: 0 12px 0 45px;
+    background-color: #F2F4F7;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+
+.lui_login_input_div.show .icon_del {
+    display: inline-block;
+}
+
+.tipsClass {
+    display: none;
+    position: absolute;
+    border: 1px solid #f6c8b5;
+    font-size: 12px;
+    padding: 8px 10px;
+    color: #ff7753;
+    margin-left: 20px;
+    background: #fff;
+}
+
+.tipsClass:before {
+    position: absolute;
+    left: 15px;
+    top: -16px;
+    content: '';
+    width: 0px;
+    height: 0px;
+    border: 8px solid transparent;
+    border-bottom-color: #f6c8b5;
+}
+
+.tipsClass:after {
+    position: absolute;
+    left: 15px;
+    top: -15px;
+    content: '';
+    width: 0px;
+    height: 0px;
+    border: 8px solid transparent;
+    border-bottom-color: #fff;
+}
+
+/*扫码登陆*/
+.third_login_form {
+    margin-top: 10px;
+    padding: 10px 0;
+}
+
+.third_login_item_desc {
+    display: none;
+}
+
+.third_login_item_icon {
+    width: 40px;
+    height: 40px;
+    font-size: 27px;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: all 0.3s;
+    -webkit-transition: 0.3s;
+    color: #9FA4B0;
+    border: 1px solid #9FA4B0;
+    background-color: #fff;
+}
+
+.login_iframe .form_bottom a:hover .third_login_item_icon {
+    color: #E5433D;
+    border: 1px solid #E5433D;
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    -o-transform: translateY(-4px);
+    transform: translateY(-4px);
+    background-color: #E5433D;
+    color: #fff;
+}
+
+.third_login_header {
+    position: relative;
+    text-align: center;
+    position: relative;
+}
+
+.third_login_header:before {
+    left: 0;
+}
+
+.third_login_header:after {
+    right: 0;
+    left: auto;
+}
+
+.third_login_header span {
+    font-size: 12px;
+    color: #8F959E;
+}
+
+.third_login_list:after {
+    content: '';
+    display: table;
+    visibility: hidden;
+    clear: both;
+}
+
+.third_login_list {
+    margin: 0;
+    padding: 0px 0 0;
+    list-style: none;
+    text-align: center;
+}
+
+.third_login_list>li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+}
+
+.third_login_list>li>a {
+    margin: 0 6px;
+    /* width: 47px; */
+    /* height: 46px; */
+    display: block;
+    border-radius: 50%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center top;
+    transition-duration: 0.3s;
+    font-size: 0;
+}
+
+.third_login_list>li>a img {
+    max-width: 100%;
+}
+
+/* 定制部分 */
+.login_iframe_tit {
+    margin: 0 30px 30px;
+}
+
+.login_iframe_tit p {
+    display: inline-block;
+    float: left;
+    position: relative;
+    width: 78px;
+    height: 78px;
+    line-height: 78px;
+    text-align: center;
+    font-size: 40px;
+    background-color: #E5433D;
+    color: #fff;
+    border-radius: 100%;
+    margin-right: 40px;
+}
+
+.login_iframe_tit p:before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: #E5433D;
+    position: absolute;
+    right: -27px;
+    top: 50%;
+    margin-top: -6px;
+    border-radius: 100%;
+}
+
+.login_iframe_tit span {
+    display: inline-block;
+    line-height: 78px;
+    font-size: 36px;
+    color: #E5433D;
+}
+
+.login-divider {
+    margin-top: 64px;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    height: 17px;
+    font-size: 12px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    line-height: 17px;
+}
+
+.login-divider::before {
+    left: 0;
+    width: 96px;
+    height: 1px;
+    top: 9px;
+    position: absolute;
+    content: '';
+}
+
+.login-divider::after {
+    right: 0;
+    width: 96px;
+    height: 1px;
+    top: 9px;
+    position: absolute;
+    content: '';
+}
+
+.login-divider-light.login-divider {
+    color: #8F959E;
+    ;
+}
+
+.login-divider-light.login-divider::before {
+    background-color: #D6DBE5;
+}
+
+.login-divider-light.login-divider::after {
+    background-color: #D6DBE5;
+}
+
+.login-divider-dark.login-divider {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.login-divider-dark.login-divider::before {
+    background-color: rgba(255, 255, 255, 0.2);
+    ;
+}
+
+.login-divider-dark.login-divider::after {
+    background-color: rgba(255, 255, 255, 0.2);
+    ;
+}
+
+.login-type-icon {
+    display: flex;
+    justify-content: space-around;
+}
+
+.login-type-item-icon{
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.login-type-item{
+    cursor: pointer;
+}
+
+.icon-pw .login-type-item-icon{
+    background-image: url(../images/btn_01zm_normal@2x.png);
+}
+.icon-pw:hover .login-type-item-icon {
+    background-image: url(../images/btn_03zm_hover@2x.png);
+}
+
+.icon-wx .login-type-item-icon {
+    background-image: url(../images/btn_02wx_normal@2x.png);
+}
+
+.icon-wx:hover .login-type-item-icon {
+    background-image: url(../images/btn_02wx_hover@2x.png);
+}
+
+.icon-dd .login-type-item-icon {
+    background-image: url(../images/btn_03dd_normal@2x.png);
+}
+
+.icon-dd:hover .login-type-item-icon {
+    background-image: url(../images/btn_03dd_hover@2x.png);
+}
+.login-type-icon.login-type-light span {
+    color: #8F959E;
+}
+
+.login-type-icon.login-type-light .login-type-item:hover span {
+    color: #333333;
+}
+
+.login-type-icon.login-type-dark span {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.login-type-icon.login-type-dark .login-type-item:hover span {
+    color: #FFFFFF;
+}
+
+/* 布局 */
+
+.login-dropbox-toggle {
+    display: none;
+}
+
+.login_iframe {
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100%;
+    padding: 0 25px;
+    z-index: 10;
+    border-radius: 0;
+    border: 0;
+    background-size: auto 100%;
+    bottom: 0;
+}
+
+.login_iframe_box_inner {
+    display: table;
+    width: 290px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.login_iframe_wrap {
+    display: block;
+    position: absolute;
+    top: 19.5%;
+    left: 0;
+    height: 70%;
+    width: 100%;
+    z-index: 4;
+}
+
+.login_iframe_wrap .logo {
+    max-width: 230px;
+    /* position: fixed; */
+    /* left: 10px; */
+    /* top: 10px; */
+}
+
+.login_iframe_wrap .logo img {
+    max-width: 230px;
+}
+
+.logo_header {
+    position: absolute;
+    z-index: 11;
+    top: 50px;
+    left: 42px;
+}
+
+/* 
+.logo_header .logo {
+	padding-left: 30px;
+	padding-top: 30px;
+} */
+
+.login_iframe .header {
+    /* font-size: 32px; */
+    font-size: 0;
+    color: #646A73;
+    /* line-height: 45px; */
+    position: relative;
+    /* display: none; */
+}
+
+.login_iframe .header_title {
+    font-size: 26px;
+    /* color: #fff; */
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.form-link a,
+.login_iframe .header .form-link {
+    float: right;
+    color: #fff;
+    font-size: 12px;
+}
+
+.form-link a:hover,
+.login_iframe .header .form-link:hover {
+    color: #fff;
+}
+
+.login_footer {
+    z-index: 3;
+}
+
+/* 输入框 */
+.lui_login_input_td {
+    position: relative;
+}
+
+.lui_login_input_td input:-internal-autofill-selected {
+    background-color: transparent !important;
+}
+
+.lui_login_input_div .icon_user,
+.lui_login_input_div .icon_pwd,
+.lui_login_input_div .icon_vcode {
+    /* display: none; */
+}
+
+.lui_login_input_div>i {
+    font-family: "third_login_item_icon" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+    left: 16px;
+    top: 8px;
+    display: inline-block;
+    width: 16px;
+    /* height: 46px; */
+    color: #979DB1;
+    font-size: 18px;
+}
+
+.lui_login_input_div .icon_user:before {
+    content: "\e8fb";
+}
+
+.lui_login_input_div .icon_pwd:before {
+    content: "\e8fd";
+}
+
+.lui_login_input_div .icon_vcode:before {
+    content: "\e8fd";
+}
+
+.lui_login_input_div .lui_login_input_username,
+.lui_login_input_div .lui_login_input_password,
+.lui_login_input_div .lui_login_input_vcode,
+.lui_login_input_div .lui_login_input_userphone {
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    padding: 10px 0;
+    height: 20px;
+    line-height: 20px;
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    background-color: transparent;
+    color: #333;
+    /* -webkit-text-fill-color: #333;  */
+    transition: all 0.3s;
+}
+
+.input_focus .lui_login_input_username,
+.input_focus .lui_login_input_password,
+.input_focus .lui_login_input_vcode {
+    color: #F2F4F7;
+    /* -webkit-text-fill-color: #F2F4F7; */
+    border-bottom-color: #F2F4F7;
+    transition-delay: 5000s;
+    -webkit-transition-delay: 5000s;
+}
+
+.lui_login_input_div input:focus,
+.input_focus input:focus {
+    text-fill-color: #333;
+    /* -webkit-text-fill-color: #333; */
+    color: #333;
+}
+
+
+/* 用户配置扫码登陆，切换异常 */
+/* 登录 */
+.lui_login_button_td {
+    /* padding: 0px 40px; */
+    padding-top: 10px;
+}
+
+.lui_login_button_td a {
+    display: inline-block;
+}
+
+.lui_login_button_td .lui_login_button_div_l {
+    cursor: pointer;
+    display: inline-block;
+    color: #fff;
+    height: 44px;
+    line-height: 50px;
+    width: 100%;
+    border: 0;
+    font-size: 24px;
+    border-radius: 4px;
+    /* background-color: #E5433D; */
+    text-align: center;
+    letter-spacing: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.lui_login_button_td .lui_login_button_div_l.l_disable {
+    background-color: #B5B9C2;
+    color: #fff;
+    cursor: default;
+}
+
+.lui_login_button_td .lui_login_button_div_l:hover {
+    border: 0;
+    /* background-color: #BE2B21; */
+}
+
+.lui_login_button_td .lui_login_button_div_l.l_disable:hover {
+    background-color: #B5B9C2;
+    color: #fff;
+    cursor: default;
+}
+
+.lui_login_button_div_c {
+    font-size: 18px;
+    line-height: 44px;
+}
+
+/* 忘记密码 */
+.lui_login_form_opt {
+    padding: 0;
+    /* padding-top: 10px; */
+}
+
+.lui_login_form_opt .link {
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.lui_login_form_opt .kkDownloadLink {}
+
+.lui_login_form_opt .forgetPswLink {
+    float: right;
+}
+
+.lui_login_form_opt a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.lui_login_form_opt a:hover {
+    text-decoration: none;
+    color: #E5433D;
+}
+
+/* 注册体验账号 */
+.lui_login_form_opt .demo_ops_login_regist {}
+
+.lui_login_form_opt .demo_ops_login_exten {
+    float: right;
+}
+
+/* 三方登录 */
+/* .third_login_list li:first-child a img,
+.third_login_list li:nth-child(2) a img {
+	display: none;
+	border: 0;
+} */
+.form_qrcode_content_back:hover {
+    color: #E5433D;
+}
+
+.third_login_header {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.third_login_header:before,
+.third_login_header:after {
+    content: '';
+    display: inline-block;
+    width: 90px;
+    height: 0.6px;
+    background-color: #D6DBE5;
+    position: absolute;
+    top: 10px;
+    /* left: 0; */
+}
+
+.third_login_header:before {
+    left: 0;
+}
+
+.third_login_header:after {
+    right: 0;
+}
+
+.form_bottom {
+    margin: 32px 0 16px 0;
+}
+
+/* 二维码 */
+.login-icon {
+    position: fixed;
+    left: 105px;
+    bottom: 64px;
+    z-index: 2;
+}
+
+.login-icon img {
+    width: 60%;
+    border-radius: 4px;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+.third_login_item_icon:before {
+    text-decoration: none;
+}
+
+/* MAC高清大屏适配 start*/
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+
+    .lui_login_input_div .icon_del,
+    .lui_login_input_div .icon_del:hover {
+        background-image: url(../images/icon_del@2x.png);
+        background-size: 16px;
+    }
+
+    .lui_login_message_div {
+        background-image: url(../images/icon_tips@2x.png);
+        background-size: 16px;
+    }
+}
+
+/* MAC高清大屏适配end */
+/* KK扫码登录 */
+.form_content_item {
+    display: none;
+}
+
+.form_content_item.form_pcscan {
+    display: none;
+}
+
+.form_content_item.form_pcscan iframe {
+    border: none;
+    margin: 20px 20px 10px;
+    height: 175px;
+}
+
+.form_pcscan_tip {
+    text-align: center;
+    color: #E5433D;
+}
+
+/* 第三方登录信息 -- V14版本 */
+.login_content_v14 .third_login_item_icon {
+    display: none;
+}
+
+@font-face {
+    font-family: 'third_login_item_icon';
+    src: url(./../font/iconfont.eot);
+    /* IE9*/
+    src: url(./../font/iconfont.eot#iefix) format('embedded-opentype'),
+        /* IE6-IE8 */
+        url(./../font/iconfont.woff) format('woff'),
+        /* chrome, firefox */
+        url(./../font/iconfont.ttf) format('truetype'),
+        /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+        url(./../font/iconfont.svg#fontmui) format('svg');
+    /* iOS 4.1- */
+}
+
+.login_content_v14 .third_login_list li a {
+    font-family: 'third_login_item_icon' !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.login_content_v14 .third_login_list li a:before {
+    content: '\e7d2';
+}
+
+/* 钉钉 */
+.login_content_v14 .third_login_list li a[href^="https://oapi.dingtalk.com"]:before {
+    content: '\e69a';
+}
+
+/* 微信 */
+.login_content_v14 .third_login_list li a[href^="https://open.work.weixin.qq.com"]:before {
+    content: '\e600';
+}
+
+/* 企业微信 */
+.login_content_v14 .third_login_list li a[href^="https://qy.weixin.qq.com/"]:before {
+    content: '\e7d2';
+}
+
+.login_content_v14 .third_login_list li a[href^="https://oapi.dingtalk.com"] img,
+.login_content_v14 .third_login_list li a[href^="https://open.work.weixin.qq.com"] img,
+.login_content_v14 .third_login_list li a[href^="https://qy.weixin.qq.com/"] img {
+    display: none;
+}
+
+
+.login_content_v14 .third_login_list li a {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #E5433D;
+    font-size: 27px;
+    line-height: 48px;
+    border-radius: 50%;
+    transition: all 0.3s;
+    -webkit-transition: 0.3s;
+    color: #E5433D;
+}
+
+.login_content_v14 .third_login_list li a:hover {
+    color: #E5433D;
+    border: 1px solid #E5433D;
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    -o-transform: translateY(-4px);
+    transform: translateY(-4px);
+}
+
+/* 第三方登录信息 -- V14版本 */
+/* V13版本隐藏多语言切换 */
+.lui_login_input_div select {
+    display: none;
+}
+
+/* 低版本隐藏页脚信息 */
+.login_content_v11 .login_footer,
+.login_content_v12 .login_footer,
+.login_content_v13 .login_footer {
+    display: none;
+}
+
+/*宣传文案 定制 Starts*/
+.lux_ad_box {
+    width: 14%;
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    margin-top: -20%;
+}
+
+/*适配starts*/
+
+/*适配ends*/
+.lux_ad_text {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.lux_ad_box img {
+    width: 100%;
+}
+
+/*宣传文案 定制 Ends*/
+
+
+/*登录按钮动画 新增starts*/
+.lui_login_button_td .lui_login_button_div_l {
+    position: relative;
+    border: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* .lui_login_button_td .lui_login_button_div_l:after {
+	position: absolute;
+	content: '';
+	width: 0;
+	height: 100%;
+	top: 0;
+	right: 0;
+	z-index: -1;
+	background-color: #E5433D;
+	border-radius: 50px;
+	transition: all 0.1s ease;
+} */
+.lui_login_button_td .lui_login_button_div_l:hover {
+    /* background: #E5433D; */
+}
+
+/*登录按钮动画 新增ends*/
+
+/* 改bug */
+/* 单选 */
+.lui_login_input_div input[type='radio'] {
+    margin: 0px 5px;
+    margin-left: 15px;
+    opacity: 0;
+    filter: "alpha(opacity=0)";
+    filter: alpha(opacity=0);
+}
+
+.lui_login_input_div input[type='radio']:first-child {
+    margin-left: 0px;
+    opacity: 0;
+    filter: "alpha(opacity=0)";
+    filter: alpha(opacity=0);
+}
+
+.lui_login_input_div input[type='radio']+label {
+    color: transparent;
+}
+
+
+@media screen and (min-height: 959px) {}
+
+@media screen and (min-height: 1079px) {}
+
+@media screen and (min-height: 1280px) {}
+
+/* 1440适配 */
+@media screen and (max-width:1500px) {
+    .login_iframe {
+        width: 280px;
+        padding: 0 30px;
+    }
+
+    /* .lui_login_input_div .lui_login_input_username, .lui_login_input_div .lui_login_input_password, .lui_login_input_div .lui_login_input_vcode {
+		width: 260px;
+	} */
+}
+
+/* 1440适配 */
+
+/* 1500 */
+@media screen and (min-width:1501px) and (max-width:1599px) {
+    .login_iframe {
+        width: 285px;
+        padding: 0 35px;
+    }
+}
+
+/*====登录框 适配starts====*/
+@media screen and (min-width: 1919px) {
+    .login_iframe {
+        width: 290px;
+        padding: 0 40px;
+    }
+}
+
+/*====登录框 适配ends====*/
+/* 1500 */
+
+
+/*====体验官登录 适配ends====*/
+.ops_login_message_div {
+    padding-right: 20px;
+    background: url(../images/icon_tips.png) no-repeat left 6px;
+    padding-left: 19px;
+    padding-right: 10px;
+}
+
+.ops_login_message_div a {
+    /* color: #E5433D; */
+    text-decoration: underline;
+}
+
+.ops_login_message_div a:hover {
+    /* color: #E5433D; */
+}
+
+form[name="demo_ops_login_form"] .lui_login_input_div .third_login_item_icon {
+    border: none;
+    background-color: transparent;
+    line-height: initial;
+}
+
+form[name="demo_ops_login_form"] .lui_login_input_div {
+    padding: 0 12px;
+}

@@ -1,0 +1,117 @@
+@charset "UTF-8";
+.lux-classic-list-6 {
+  min-width: 240px;
+  list-style: none;
+  /* 序号 starts*/
+  /* 序号 ends*/
+}
+
+.lux-classic-list-6 .lux-classic-num {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -9px;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  vertical-align: middle;
+  border-radius: 50%;
+  color: #999999;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.lux-classic-list-6 .lux-classic-list-item {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 0;
+  position: relative;
+  /*前三*/
+}
+
+.lux-classic-list-6 .lux-classic-list-item:first-child .lux-classic-num,
+.lux-classic-list-6 .lux-classic-list-item:nth-child(2) .lux-classic-num,
+.lux-classic-list-6 .lux-classic-list-item:nth-child(3) .lux-classic-num {
+  color: #333333;
+  background: #eeeeee;
+}
+
+.lux-classic-list-6 .lux-classic-list-item a {
+  position: relative;
+  display: table-cell;
+  height: 20px;
+  line-height: 20px;
+  padding: 0;
+  vertical-align: middle;
+  overflow: hidden;
+  /* 访问过*/
+}
+
+.lux-classic-list-6 .lux-classic-list-item a:visited .lux-classic-title {
+  color: #999;
+}
+
+.lux-classic-list-6 .lux-classic-list-item a:visited:hover .lux-classic-title {
+  color: inherit;
+}
+
+.lux-classic-list-6 .lui-classic-content {
+  position: relative;
+  padding: 0 0 0 26px;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
+.lux-classic-list-6 .lux-classic-replies,
+.lux-classic-list-6 .lux-classic-date {
+  display: table-cell;
+  width: 80px;
+  height: 20px;
+  line-height: 20px;
+  text-align: right;
+  font-size: 12px;
+  color: #999999;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+.lux-classic-list-6 .lux-classic-title {
+  display: inline-block;
+  width: 90%;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lux-classic-list-6 .lux-classic-desc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #9799a8;
+  font-size: 12px;
+}
+
+.lux-classic-list-6 .lux-icon-s {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}
+
+.lux-classic-list-6 .lux-classic-no-desc .lux-classic-title {
+  line-height: inherit;
+}
